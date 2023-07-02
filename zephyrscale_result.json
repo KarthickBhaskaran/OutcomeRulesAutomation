@@ -1,0 +1,150 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 2383059800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CucumberHooks.before(Scenario)"
+            }
+          }
+        ],
+        "line": 6,
+        "name": "Test outcome rules and  capture booking ID",
+        "description": "",
+        "id": "outcometest-in-uat-environment;test-outcome-rules-and--capture-booking-id",
+        "after": [
+          {
+            "output": [
+              ""
+            ],
+            "result": {
+              "duration": 480689700,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CucumberHooks.teardownWebDriverController(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "output": [
+              "CRM Login Successful",
+              "***********************",
+              "Screenshot goes hereOutcomeTest_1680564376951"
+            ],
+            "result": {
+              "duration": 63957564000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I login to CRM",
+            "match": {
+              "location": "CartPageSteps.ilogintocrm()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "output": [
+              "****************************************",
+              "Total records for tests   : 2",
+              "****************************************",
+              "\u003cspan style\u003d\u0027Color: blue\u0027\u003eTCRef                        : TAS_17\u003c/span\u003e",
+              "CONTRACT_GROUP_ID            : HIAS_TAS",
+              "Disposition_Description      : See dentist in 24 hrs",
+              "Patient Info saved in case",
+              "Screenshot goes hereOutcomeTest_1680564436077",
+              "****************************************",
+              "Triage Level                 : consultation_24",
+              "CDSS Channel                 : personal_visit",
+              "Hint                         : N/A",
+              "Specialist                   : Dentist",
+              "****************************************",
+              "Outcome Modal with Initial Disposition",
+              "Screenshot goes hereOutcomeTest_1680564467678",
+              "CRM Triage screen with Initial Disposition",
+              "Screenshot goes hereOutcomeTest_1680564472213",
+              "Initial Disposition          : See dentist in 24 hrs",
+              "CRM Triage screen with Disposition confirmed",
+              "Screenshot goes hereOutcomeTest_1680564490424",
+              "CRM Triage screen Initial Ouctome",
+              "Screenshot goes hereOutcomeTest_1680564501788",
+              "****************************************",
+              "Initial Outcome 1            : Contact your dentist today",
+              "****************************************",
+              "Expected Outcome             : Contact your dentist today",
+              "Final Outcome                : \nContact your dentist today",
+              "Screenshot goes hereOutcomeTest_1680564507518",
+              "Case ID                      :   CAS-37063-B9C0T2",
+              "Screenshot goes hereOutcomeTest_1680564511562",
+              "\u003cspan style\u003d\u0027Color: green\u0027\u003e Disposition validation Successful\u003c/span\u003e",
+              "\u003cspan style\u003d\u0027Color: green\u0027\u003e Outcome validation Successful\u003c/span\u003e",
+              " *****************************************************************************",
+              "\u003cspan style\u003d\u0027Color: blue\u0027\u003eTCRef                        : TAS_22\u003c/span\u003e",
+              "CONTRACT_GROUP_ID            : HIAS_TAS",
+              "Disposition_Description      : See GP in 2 hrs, inc telehealth",
+              "Patient Info saved in case",
+              "Screenshot goes hereOutcomeTest_1680564582844",
+              "****************************************",
+              "Triage Level                 : consultation_24",
+              "CDSS Channel                 : Audio teleconsultation",
+              "Hint                         : Consultation_2",
+              "Specialist                   : General Practitioner",
+              "****************************************",
+              "Outcome Modal with Initial Disposition",
+              "Screenshot goes hereOutcomeTest_1680564615273",
+              "CRM Triage screen with Initial Disposition",
+              "Screenshot goes hereOutcomeTest_1680564619721",
+              "Initial Disposition          : See GP in 2 hrs, inc telehealth",
+              "CRM Triage screen with Disposition confirmed",
+              "Screenshot goes hereOutcomeTest_1680564637738",
+              "CRM Triage screen Initial Ouctome",
+              "Screenshot goes hereOutcomeTest_1680564649345",
+              "****************************************",
+              "Initial Outcome 1            : Refer to GPAT",
+              "Initial Outcome 2            : See a doctor in 2 hours or teleconsultation",
+              "****************************************",
+              "Expected Outcome             : See a doctor in 2 hours or teleconsultation",
+              "Final Outcome                : \nSee a doctor in 2 hours or teleconsultation",
+              "Screenshot goes hereOutcomeTest_1680564659089",
+              "Case ID                      :   CAS-37064-V6G1R3",
+              "Screenshot goes hereOutcomeTest_1680564663028",
+              "\u003cspan style\u003d\u0027Color: green\u0027\u003e Disposition validation Successful\u003c/span\u003e",
+              "\u003cspan style\u003d\u0027Color: green\u0027\u003e Outcome validation Successful\u003c/span\u003e",
+              " *****************************************************************************"
+            ],
+            "result": {
+              "duration": 299371468100,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "I perform Outcome Rule Test",
+            "match": {
+              "location": "CartPageSteps.i_perform_outcome_ruletest()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Outcome"
+          }
+        ]
+      }
+    ],
+    "name": "OutcomeTest in UAT Environment",
+    "description": "",
+    "id": "outcometest-in-uat-environment",
+    "keyword": "Feature",
+    "uri": "hda/outcome/rules/tests/OutcomeRulesTest.feature",
+    "tags": []
+  }
+]
