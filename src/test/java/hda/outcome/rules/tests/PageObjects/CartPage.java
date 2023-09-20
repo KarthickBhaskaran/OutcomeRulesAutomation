@@ -4,11 +4,13 @@ import com.codoid.products.exception.FilloException;
 import com.codoid.products.fillo.Connection;
 import com.codoid.products.fillo.Fillo;
 import com.codoid.products.fillo.Recordset;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import com.google.common.io.Files;
 import hda.outcome.rules.tests.Hooks.CucumberHooks;
 import hda.outcome.rules.tests.cotrollers.BasePage;
 import hda.outcome.rules.tests.testContext.TestExecutionContext;
 import org.openqa.selenium.*;
+import org.openqa.selenium.support.ui.ExpectedCondition;
 
 import java.io.File;
 import java.io.IOException;
@@ -677,11 +679,11 @@ public class CartPage extends BasePage {
         //driverFacade.manage().window().maximize();
         driverFacade.HardWait(8000);
         */
-        By callType = By.xpath("//select[@data-id='hd_calltype.fieldControl-option-set-select']");
-        driverFacade.findElement(callType).setText("Quick Call");
+        // By callType = By.xpath("//select[@data-id='hd_calltype.fieldControl-option-set-select']");
+        //driverFacade.findElement(callType).setText("Quick Call");
     }
 
-    public void entercallerdetails() {
+    public void entercallerdetails() throws Exception {
 
         By Patientlookup = By.xpath("//input[@data-id='hd_patient.fieldControl-LookupResultsDropdown_hd_patient_textInputBox_with_filter_new']");
         driverFacade.findElement(Patientlookup).clickWebElement();
@@ -698,37 +700,49 @@ public class CartPage extends BasePage {
 
         By mobileNo = By.xpath("//input[@data-id='mobilephone.fieldControl-phone-text-input']");
         driverFacade.findElement(mobileNo).clickWebElement();
-        driverFacade.findElement(mobileNo).setText("0478795673");
+        driverFacade.findElement(mobileNo).setText(driverFacade.GetPhonenum());
         driverFacade.HardWait(1000);
         By firstName = By.xpath("//input[@data-id='firstname.fieldControl-text-box-text']");
         driverFacade.findElement(firstName).sendKeys("CTRL+A");
-        driverFacade.findElement(firstName).setText("Jag27");
+        driverFacade.findElement(firstName).setText("CRME2E");
         //driverFacade.findElement(firstName).
         driverFacade.HardWait(1000);
         By lastName = By.xpath("//input[@data-id='lastname.fieldControl-text-box-text']");
         driverFacade.findElement(lastName).sendKeys("CTRL+A");
-        driverFacade.findElement(lastName).setText("Test26");
+        driverFacade.findElement(lastName).setText("Test");
         driverFacade.HardWait(2000);
         //By DOB = By.xpath( "//INPUT[@DATA-ID='BIRTHDATE.FIELDCONTROL-DATE-TIME-INPUT']");
         By DOB = By.xpath("//*[contains(@id,'DatePicker')]");
+        //By DOB = By.xpath( "//input[@data-id='birthdate.fieldControl-date-time-input']");
+        //driverFacade.findElement(DOB).setText("03/08/1987");
         //driverFacade.findElement(DOB).sendKeys("11/10/2000");
-        driverFacade.HardWait(2000);
-        driverFacade.findElement(DOB).setText("11/10/2000");
-        driverFacade.HardWait(2000);
+        //driverFacade.HardWait(2000);
+        //driverFacade.findElement(DOB).clickWebElement().setText("03/08/1987");
+
+
+        //driverFacade.JSExecutorDate("DatePicker42-label","03/08/1987");
+        //driverFacade.findElement(DOB).sendKeys("CTRL+A").clickAndSetText("03/08/1987").sendKeys("TAB");
+        //driverFacade.findElement(DOB).sendKeys("CTRL+A").setText("03/08/1987");
+        driverFacade.HardWait(1000);
+        //driverFacade.findElement(DOB).clickWebElement().sendKeys("CTRL+A").setText("03/08/1987");
+        //driverFacade.findElement(DOB).setText("03/08/1987")
+
+        //driverFacade.findElement(DOB).sendKeys(driverFacade.GetDOB());
+        driverFacade.HardWait(3000);
         //driverFacade.findElement(DOB).sendKeys("CTRL+A").setText("11/10/2000");
         By Sex = By.xpath("//select[@data-id='hd_sex.fieldControl-option-set-select']");
         driverFacade.findElement(Sex).setText("Male");
-        driverFacade.HardWait(1000);
+        driverFacade.HardWait(2000);
         //Select sel = new Select(Sex);
         //sel.selectByValue("Male").
 
-        // By Indigenous = By.xpath("//select[@data-id='hd_atsistatus.fieldControl-option-set-select']");
-        // driverFacade.findElement(Indigenous).sendKeys("No");
+         By Indigenous = By.xpath("//select[@data-id='hd_atsistatus.fieldControl-option-set-select']");
+         driverFacade.findElement(Indigenous).setText("No");
         //Select indigenous = new Select(Indigenous);
         //indigenous.selectByIndex(1);
         driverFacade.HardWait(1000);
         By Address = By.xpath( "//input[@id='caddress']");
-        driverFacade.findElement(Address).setText("2000");
+        driverFacade.findElement(Address).setText(driverFacade.GetPostcode());
 
 
         driverFacade.HardWait(3000);
@@ -739,6 +753,10 @@ public class CartPage extends BasePage {
 
         driverFacade.HardWait(1000);
         driverFacade.take_screenShot();
+
+        driverFacade.HardWait(2000);
+        driverFacade.findElement(DOB).clickWebElement().sendKeys("CTRL+A").setText("03/08/1987").sendKeys("TAB");
+        driverFacade.HardWait(2000);
 
         By saveAndClose = By.xpath("//button[@data-id='quickCreateSaveAndCloseBtn']");
         driverFacade.findElement(saveAndClose).clickWebElement();
@@ -761,7 +779,7 @@ public class CartPage extends BasePage {
         driverFacade.HardWait(2000);
 
         By statedrop = By.xpath("//select[@data-id='header_hd_state.fieldControl-option-set-select']");
-        driverFacade.findElement(statedrop).setText("NSW");
+        driverFacade.findElement(statedrop).setText("WA");
 
         driverFacade.HardWait(2000);
 
@@ -779,16 +797,29 @@ public class CartPage extends BasePage {
         driverFacade.findElement(reasnForCall).sendKeys("CTRL+A");
         driverFacade.findElement(reasnForCall).setText("Test");
         driverFacade.take_screenShot();
-        
+
+        By curAddSameAsResiden = By.xpath("//select[@data-id='hd_currentlocationsameasresidential.fieldControl-option-set-select']");
+        //select[@data-id='hd_currentlocationsameasresidential.fieldControl-option-set-select']
+
+        //By curAddSameAsResiden = By.xpath("//*[contains(@data-id,'hd_currentlocationsameasresidential.fieldControl-option-set-select')]");
+        //By curAddSameAsResiden = By.xpath("//select[@data-id='header_process_hd_currentlocationsameasresidential.fieldControl-option-set-select']");
+        driverFacade.findElement(curAddSameAsResiden).setText("Yes");
+        driverFacade.HardWait(4000);
+        By ProfileCheck = By.id("Toggle0");
+
+        driverFacade.findElement(ProfileCheck).clickWebElement();
+        driverFacade.HardWait(4000);
     }
 
     public void savecase() {
-        driverFacade.HardWait(2000);
+        //driverFacade.HardWait(8000);
 
-        By saveEncounter = By.xpath("//img[@title='Save']");
-        driverFacade.findElement(saveEncounter).clickWebElement();
+        //By saveEncounter = By.xpath("//img[@title='Save']");
+        //driverFacade.findElement(saveEncounter).clickWebElement();
 
         driverFacade.HardWait(15000);
+        By saveandcontinue = By.xpath("//button[@aria-label='Save and continue']");
+        driverFacade.findElementoptional(saveandcontinue).clickWebElementOptional();
 
         driverFacade.findElement(emergencyFlyout).clickWebElement();
 
@@ -799,15 +830,15 @@ public class CartPage extends BasePage {
 
         driverFacade.HardWait(8000);
 
-        By curAddSameAsResiden = By.xpath("//select[@data-id='header_process_hd_currentlocationsameasresidential.fieldControl-option-set-select']");
-        driverFacade.findElement(curAddSameAsResiden).setText("Yes");
+        //By curAddSameAsResiden = By.xpath("//select[@data-id='header_process_hd_currentlocationsameasresidential.fieldControl-option-set-select']");
+        //driverFacade.findElement(curAddSameAsResiden).setText("Yes");
 
-        driverFacade.HardWait(1000);
-        driverFacade.take_screenShot();
+        //driverFacade.HardWait(1000);
+        //driverFacade.take_screenShot();
 
-        driverFacade.findElement(nextPage).clickWebElement();
+        //driverFacade.findElement(nextPage).clickWebElement();
 
-        driverFacade.HardWait(5000);
+        //driverFacade.HardWait(5000);
 
     }
 
@@ -851,7 +882,7 @@ public class CartPage extends BasePage {
         driverFacade.findElement(By.tagName("Body")).sendKeys("PageUp");
 
         driverFacade.HardWait(2000);
-
+/*
         By interviewQ = By.xpath("//input[@id='rdbtn_No_p_389']");
         driverFacade.findElement(interviewQ).clickWebElement();
         driverFacade.HardWait(1000);
@@ -860,7 +891,7 @@ public class CartPage extends BasePage {
         By interviewNext = By.xpath("//button[@id='btnNext']");
         driverFacade.findElement(interviewNext).clickWebElement();
         driverFacade.HardWait(10000);
-
+*/
         //driverFacade.switchTo().frame("WebResource_triageWR");
         By confirmDisposition = By.xpath("//button[@id='btnConfirmDisposition']");
         driverFacade.findElement(confirmDisposition).clickWebElement();
@@ -877,20 +908,82 @@ public class CartPage extends BasePage {
         driverFacade.take_screenShot();
 
         driverFacade.HardWait(18000);
-
+        driverFacade.scrollDown();
+        By interviewNext = By.xpath("//button[@id='btnNext']");
+        driverFacade.findElement(interviewNext).clickWebElement();
+        driverFacade.HardWait(3000);
 
         driverFacade.SwitchToDefaultContext();
         driverFacade.HardWait(3000);
+
+
         //  By nextPage = By.xpath("//button[@id='btnConfirmOutcome']");
     }
 
+    public void servicesearch(){
+        //driverFacade.switchTo().frame("WebResource_ServiceProviderSearch");
+        By framepath = By.xpath("//iframe[@id='WebResource_ServiceProviderSearch']");
+        // Outcome modal handling
+        driverFacade.SwitchTo(framepath);
+        //click search
+        By search = By.xpath("//button[text()='Search']");
+        driverFacade.findElement(search).clickWebElement();
+        driverFacade.HardWait(15000);
+        driverFacade.SwitchToDefaultContext();
+        By OKBtn = By.xpath("//button[@aria-label='OK']");
+        driverFacade.findElementoptional(OKBtn).clickWebElementOptional();
+
+        //Wait for page to load before clicking homeVisit tab
+        By homeVisitTab = By.cssSelector("#btnHomeVisits");
+        driverFacade.SwitchTo(framepath);
+        // Perform actions on the enabled WebElement
+        driverFacade.findElement(homeVisitTab).clickWebElement();
+        driverFacade.HardWait(10000);
+        //driverFacade.SwitchToDefaultContext();
+        //driverFacade.findElementoptional(OKBtn).clickWebElementOptional();
+
+        //Wait for page to load before clicking phoneAndOnline tab
+        By phoneAndOnlineTab = By.cssSelector("#btnPhoneAndOnline");
+        //driverFacade.SwitchTo(framepath);
+        driverFacade.findElement(phoneAndOnlineTab).clickWebElement();
+        driverFacade.HardWait(10000);
+        //driverFacade.SwitchToDefaultContext();
+        //driverFacade.findElementoptional(OKBtn).clickWebElementOptional();
+
+        //click ServiceNearBy tab
+        By serviceNearByTab = By.cssSelector("#btnServiceNearby");
+        //driverFacade.SwitchTo(framepath);
+        driverFacade.findElement(serviceNearByTab).clickWebElement();
+        driverFacade.HardWait(10000);
+        driverFacade.SwitchToDefaultContext();
+        //driverFacade.findElementoptional(OKBtn).clickWebElementOptional();
+        //click MoreInfo link
+
+        //click Back to Search Results
+        By backToSearchResult = By.cssSelector("#closeInfo");
+
+
+        //switch from service provider iframe to default content
+        //driverFacade.switchTo().defaultContent();
+        //driverFacade.SwitchToDefaultContext();
+        driverFacade.HardWait(3000);
+       // By moreInfoLink = By.xpath("(//a[text()='More Info'])[1]");
+        //driverFacade.findElement(moreInfoLink).clickWebElement();
+        //driverFacade.HardWait(3000);
+        //driverFacade.findElement(backToSearchResult).clickWebElement();
+    }
+
     public void completecase() {
+
+        By ServiceTab = By.xpath("//div[@data-id='MscrmControls.Containers.ProcessBreadCrumb-stageIndicatorHolder961a743f-0784-4b7f-ac71-63aaa812630f']");
+        driverFacade.findElement(ServiceTab).clickWebElement();
         driverFacade.findElement(nextPage).clickWebElement();
-        driverFacade.HardWait(5000);
+        By OKBtn = By.xpath("//button[@aria-label='OK']");
+        driverFacade.findElementoptional(OKBtn).clickWebElementOptional();
         driverFacade.findElement(nextPage).clickWebElement();
-        driverFacade.HardWait(5000);
-        driverFacade.findElement(nextPage).clickWebElement();
-        driverFacade.HardWait(5000);
+        driverFacade.findElementoptional(OKBtn).clickWebElementOptional();
+        //driverFacade.findElement(nextPage).clickWebElement();
+        //driverFacade.HardWait(5000);
 
         By origIncline = By.xpath("//select[@data-id='header_process_hd_originalinclination.fieldControl-option-set-select']");
         driverFacade.findElement(origIncline).setText("Did not know");
@@ -902,10 +995,10 @@ public class CartPage extends BasePage {
 
         driverFacade.HardWait(10000);
 
-        By resolveEncounter = By.xpath("//img[@title='Resolve Case']");
-        driverFacade.findElement(resolveEncounter).clickWebElement();
+        //By resolveEncounter = By.xpath("//img[@title='Resolve Case']");
+        //driverFacade.findElement(resolveEncounter).clickWebElement();
 
-        driverFacade.HardWait(10000);
+        //driverFacade.HardWait(10000);
         driverFacade.take_screenShot();
 
         String CI = driverFacade.findElement(caseidheader).getWebElementText();
@@ -917,7 +1010,7 @@ public class CartPage extends BasePage {
 
 
         By saveaClose = By.xpath("//div[@role='presentation']/ul[@role='menubar']/li/button[@data-id='incidentresolution|NoRelationship|Form|Mscrm.Form.incidentresolution.SaveAndClose']");
-        driverFacade.findElement(saveaClose).clickWebElement();
+        //driverFacade.findElement(saveaClose).clickWebElement();
     }
 }
 

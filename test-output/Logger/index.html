@@ -57,14 +57,6 @@
 							</a>
 						</li>
 						<li>
-							<a href="exception.html">
-							<span class="nav-icon">
-							<i class="fa fa-warning"></i>
-							</span>
-							<span class="nav-text">Exceptions</span>
-							</a>
-						</li>
-						<li>
 							<a href="dashboard.html">
 							<span class="nav-icon">
 							<i class="fa fa-dashboard"></i>
@@ -109,7 +101,7 @@
 									</a>
 									<div class="dropdown-menu pt-0 mt-2 animate fadeIn">
 										<a class="dropdown-item" href="#"><span class="tf" status="pass"><i class="fa fa-dot-circle-o text-success"></i>Pass</span></a>
-										<a class="dropdown-item" href="#"><span class="tf" status="fail"><i class="fa fa-dot-circle-o text-danger"></i>Fail</span></a>
+										
 										
 										
 										
@@ -126,7 +118,7 @@
 								        </span>
 							        </a>
 							        <div class="dropdown-menu pt-0 mt-2 animate fadeIn">
-						    	        <a class="dropdown-item" href="#"><span class="cf">@Outcome</span></a>
+						    	        <a class="dropdown-item" href="#"><span class="cf">@CRMCaseCreation</span></a>
 						    	        <div class="dropdown-divider"></div>
 						    	        <a class="dropdown-item" href="#"><span class="tf" status="clear"><i class="fa fa-dot-circle-o text-warn"></i>Clear</span></a>
 						    	      </div>
@@ -143,23 +135,23 @@
 								<div class="col-md-8 col-sm-12">
 									<div class="logger-content">
 										<h6 class="mb-3 ml-1">Test Logs</h6>
-											<div class="tsc" status="fail">
-											<div class="st fail test l0" 
+											<div class="tsc" status="pass">
+											<div class="st pass test l0" 
 												tags=""
 												devices="">
-												<span class="tt">06.26.2023 14:32:19</span>&nbsp;
-												<span class="ts">fail</span>&nbsp;&nbsp;
-												<span class="tn">[OutcomeTest in UAT Environment] started</span>
+												<span class="tt">09.20.2023 13:42:14</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">[CRM Manual case creation in UAT Environment] started</span>
 												
 											</div>
-											<div class="st fail test l1" 
-												tags="@Outcome"
+											<div class="st pass test l1" 
+												tags="@CRMCaseCreation"
 												devices="">
-												<span class="tt">06.26.2023 14:32:19</span>&nbsp;
-												<span class="ts">fail</span>&nbsp;&nbsp;
-												<span class="tn">|---[Test outcome rules and  capture booking ID] started</span>
+												<span class="tt">09.20.2023 13:42:14</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">|---[Test HIAS case creation and  capture case ID] started</span>
 												<span class="category-list">
-													<span class="category badge"><i class="fa fa-tag"></i> @Outcome</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @CRMCaseCreation</span>
 												</span>
 												<span class="author-list">
 												</span>
@@ -170,12 +162,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">06.26.2023 14:32:19</span>&nbsp;
+												<span class="tt">09.20.2023 13:42:14</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[CucumberHooks.before(Scenario)] started</span>
 												
 												<div class="st pass">
-													<span class="tt">06.26.2023 14:32:21</span>&nbsp;
+													<span class="tt">09.20.2023 13:42:21</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[CucumberHooks.before(Scenario)]</span>
 													
@@ -185,119 +177,159 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">06.26.2023 14:32:21</span>&nbsp;
+												<span class="tt">09.20.2023 13:42:21</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Given I login to CRM] started</span>
 												
 												<div class="st info">
-													<span class="tt">06.26.2023 14:33:19</span>&nbsp;
+													<span class="tt">09.20.2023 13:43:19</span>&nbsp;
 													<span class="ts">info</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Given I login to CRM]</span>
 													
 													<span class="td">CRM Login Successful</span>
 												</div>
 												<div class="st info">
-													<span class="tt">06.26.2023 14:33:19</span>&nbsp;
+													<span class="tt">09.20.2023 13:43:19</span>&nbsp;
 													<span class="ts">info</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Given I login to CRM]</span>
 													
 													<span class="td">***********************</span>
 												</div>
 												<div class="st info">
-													<span class="tt">06.26.2023 14:33:19</span>&nbsp;
+													<span class="tt">09.20.2023 13:43:19</span>&nbsp;
 													<span class="ts">info</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Given I login to CRM]</span>
 													
-													<span class="td">Screenshot goes hereOutcomeTest_1687753999124</span>
-												</div>
-											</div>
-											<div class="st fail test l2" 
-												tags=""
-												devices="">
-												<span class="tt">06.26.2023 14:33:19</span>&nbsp;
-												<span class="ts">fail</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And I perform Outcome Rule Test] started</span>
-												
-												<div class="st info">
-													<span class="tt">06.26.2023 14:33:22</span>&nbsp;
-													<span class="ts">info</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And I perform Outcome Rule Test]</span>
-													
-													<span class="td">****************************************</span>
-												</div>
-												<div class="st info">
-													<span class="tt">06.26.2023 14:33:23</span>&nbsp;
-													<span class="ts">info</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And I perform Outcome Rule Test]</span>
-													
-													<span class="td">Total records for tests   : 4</span>
-												</div>
-												<div class="st info">
-													<span class="tt">06.26.2023 14:33:23</span>&nbsp;
-													<span class="ts">info</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And I perform Outcome Rule Test]</span>
-													
-													<span class="td">****************************************</span>
-												</div>
-												<div class="st info">
-													<span class="tt">06.26.2023 14:33:23</span>&nbsp;
-													<span class="ts">info</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And I perform Outcome Rule Test]</span>
-													
-													<span class="td"><span style='Color: blue'>TCRef                        : TAS_25</span></span>
-												</div>
-												<div class="st info">
-													<span class="tt">06.26.2023 14:33:23</span>&nbsp;
-													<span class="ts">info</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And I perform Outcome Rule Test]</span>
-													
-													<span class="td">CONTRACT_GROUP_ID            : HIAS_TAS</span>
-												</div>
-												<div class="st info">
-													<span class="tt">06.26.2023 14:33:23</span>&nbsp;
-													<span class="ts">info</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And I perform Outcome Rule Test]</span>
-													
-													<span class="td">Disposition_Description      : See a doctor today</span>
-												</div>
-												<div class="st fail">
-													<span class="tt">06.26.2023 14:33:23</span>&nbsp;
-													<span class="ts">fail</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And I perform Outcome Rule Test]</span>
-													
-													<span class="td">threw an exception<br><textarea disabled class="code-block">org.openqa.selenium.WebDriverException: unknown error: net::ERR_INTERNET_DISCONNECTED
-  (Session info: chrome=114.0.5735.134)
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'WAZ2-DEV-575603', ip: '127.0.0.1', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.134, chrome: {chromedriverVersion: 113.0.5672.63 (0e1a4471d5ae..., userDataDir: C:\Users\KARTHI~1.BHA\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:56080}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 91d9a4f8f77042e0bd2d379dc65e28f3
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)
-	at hda.outcome.rules.tests.cotrollers.DriverFacade.navigateToUrl(DriverFacade.java:336)
-	at hda.outcome.rules.tests.PageObjects.CartPage.performoutcometest(CartPage.java:238)
-	at hda.outcome.rules.tests.stepdefs.CartPageSteps.i_perform_outcome_ruletest(CartPageSteps.java:28)
-	at ✽.I perform Outcome Rule Test(hda/outcome/rules/tests/CRM_ManualCaseCreation.feature:9)
-</textarea></span>
+													<span class="td">Screenshot goes hereOutcomeTest_1695181399613</span>
 												</div>
 											</div>
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">06.26.2023 14:33:23</span>&nbsp;
+												<span class="tt">09.20.2023 13:43:19</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then I Enter Caller details] started</span>
+												
+												<div class="st info">
+													<span class="tt">09.20.2023 13:43:51</span>&nbsp;
+													<span class="ts">info</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then I Enter Caller details]</span>
+													
+													<span class="td">Screenshot goes hereOutcomeTest_1695181431697</span>
+												</div>
+												<div class="st info">
+													<span class="tt">09.20.2023 13:44:18</span>&nbsp;
+													<span class="ts">info</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then I Enter Caller details]</span>
+													
+													<span class="td">Screenshot goes hereOutcomeTest_1695181458011</span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">09.20.2023 13:44:18</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And I Enter Call Source state] started</span>
+												
+												<div class="st info">
+													<span class="tt">09.20.2023 13:44:31</span>&nbsp;
+													<span class="ts">info</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And I Enter Call Source state]</span>
+													
+													<span class="td">Screenshot goes hereOutcomeTest_1695181471421</span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">09.20.2023 13:44:41</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then I Save case and fill identity] started</span>
+												
+												<div class="st pass">
+													<span class="tt">09.20.2023 13:45:13</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then I Save case and fill identity]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">09.20.2023 13:45:13</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And I Enter symptoms and triage] started</span>
+												
+												<div class="st info">
+													<span class="tt">09.20.2023 13:45:29</span>&nbsp;
+													<span class="ts">info</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And I Enter symptoms and triage]</span>
+													
+													<span class="td">Screenshot goes hereOutcomeTest_1695181529049</span>
+												</div>
+												<div class="st info">
+													<span class="tt">09.20.2023 13:45:59</span>&nbsp;
+													<span class="ts">info</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And I Enter symptoms and triage]</span>
+													
+													<span class="td">Screenshot goes hereOutcomeTest_1695181559038</span>
+												</div>
+												<div class="st info">
+													<span class="tt">09.20.2023 13:46:05</span>&nbsp;
+													<span class="ts">info</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And I Enter symptoms and triage]</span>
+													
+													<span class="td">Screenshot goes hereOutcomeTest_1695181565542</span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">09.20.2023 13:46:30</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And I perform service search] started</span>
+												
+												<div class="st pass">
+													<span class="tt">09.20.2023 13:47:22</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And I perform service search]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">09.20.2023 13:47:22</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And I complete the case and resolve] started</span>
+												
+												<div class="st info">
+													<span class="tt">09.20.2023 13:49:00</span>&nbsp;
+													<span class="ts">info</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And I complete the case and resolve]</span>
+													
+													<span class="td">Screenshot goes hereOutcomeTest_1695181740307</span>
+												</div>
+												<div class="st info">
+													<span class="tt">09.20.2023 13:49:01</span>&nbsp;
+													<span class="ts">info</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And I complete the case and resolve]</span>
+													
+													<span class="td">Case ID                      :  CAS-42448-C5B8Y0</span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">09.20.2023 13:49:01</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[CucumberHooks.teardownWebDriverController(Scenario)] started</span>
 												
 												<div class="st pass">
-													<span class="tt">06.26.2023 14:33:23</span>&nbsp;
+													<span class="tt">09.20.2023 13:49:01</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[CucumberHooks.teardownWebDriverController(Scenario)]</span>
 													

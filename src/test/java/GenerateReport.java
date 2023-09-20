@@ -2,7 +2,7 @@ import java.io.*;
 
 public class GenerateReport {
 
-    public static void main(String args[]) throws IOException {
+    public static void main(String args[]) throws IOException { 
 
 
         File log = new File("test-output/HtmlReport/ExtentHtml.html");

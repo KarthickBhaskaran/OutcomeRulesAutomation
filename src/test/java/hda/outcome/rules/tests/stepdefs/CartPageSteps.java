@@ -32,7 +32,7 @@ public class CartPageSteps {
         cartPage.loadmanualcasepage();
     }
     @Then ("I Enter Caller details")
-    public void i_enter_callderdetails(){
+    public void i_enter_callderdetails() throws Exception {
         cartPage.entercallerdetails();
     }
     @And ("I Enter Call Source state")
@@ -47,6 +47,12 @@ public class CartPageSteps {
     public void i_enter_triage(){
         cartPage.entertriage();
     }
+
+    @And("I perform service search")
+    public void i_perform_servicesearch(){
+        cartPage.servicesearch();
+    }
+
     @And ("I complete the case and resolve")
     public void i_complete_case(){
         cartPage.completecase();

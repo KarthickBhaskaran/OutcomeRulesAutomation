@@ -24,6 +24,7 @@ import java.io.InputStream;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.text.DateFormat;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.concurrent.TimeUnit;
@@ -121,7 +122,7 @@ public class DriverFacade extends WebdriverHelper {
         if (browserTypes == BrowserTypes.CHROME) {
             //System.setProperty(ChromeDriverService.CHROME_DRIVER_SILENT_OUTPUT_PROPERTY, "true");
             //System.setProperty("webdriver.chrome.driver", FetchDriverPath(BrowserTypes.CHROME));
-            System.setProperty("webdriver.chrome.driver","C:\\Users\\karthick.bhaskaran\\Downloads\\chromedriver_win32\\chromedriver.exe");
+            System.setProperty("webdriver.chrome.driver", "C:\\Users\\karthick.bhaskaran\\Downloads\\chromedriver_win32\\chromedriver.exe");
             ChromeOptions options = new ChromeOptions();
 
             Map<String, Object> prefs = new HashMap<>();
@@ -129,7 +130,8 @@ public class DriverFacade extends WebdriverHelper {
             prefs.put("profile.default_content_setting_values.media_stream_camera", 2);
             prefs.put("profile.default_content_setting_values.geolocation", 2);
             prefs.put("profile.default_content_setting_values.notifications", 2);
-            prefs.put("credentials_enable_service", false);prefs.put("profile.password_manager_enabled", false);
+            prefs.put("credentials_enable_service", false);
+            prefs.put("profile.password_manager_enabled", false);
             prefs.put("autofill.profile_enabled", false);
             options.setExperimentalOption("prefs", prefs);
             options.setExperimentalOption("excludeSwitches", Arrays.asList("disable-popup-blocking"));
@@ -143,13 +145,11 @@ public class DriverFacade extends WebdriverHelper {
             options.addArguments("disable-popup-blocking", "true");
 
 
-
-
             //options.addArguments(
-                    //"--headless",
-                    //   options.addArguments("--disable-gpu",
-                    //"--window-size=1920,1200",
-             //       "--window-size=1680,1050", "--ignore-certificate-errors", "--disable-extensions", "--no-sandbox", "--disable-dev-shm-usage");
+            //"--headless",
+            //   options.addArguments("--disable-gpu",
+            //"--window-size=1920,1200",
+            //       "--window-size=1680,1050", "--ignore-certificate-errors", "--disable-extensions", "--no-sandbox", "--disable-dev-shm-usage");
             this.webDriver = new ChromeDriver(options);
             webDriver.manage().timeouts().implicitlyWait(FetchGlobalImplicitWaitTimeout(), TimeUnit.SECONDS);
             webDriver.manage().window().maximize();
@@ -199,9 +199,6 @@ public class DriverFacade extends WebdriverHelper {
         return GetPassword();
     }
 
-    public String DMCgetUserName() {
-        return DMCGetUserName();
-    }
 
     public String DMCgetPassword() {
         return DMCGetPassword();
@@ -213,14 +210,6 @@ public class DriverFacade extends WebdriverHelper {
 
     public String TravolutionarygetPassword() {
         return TravolutionaryGetPassword();
-    }
-
-    public String ECAgetUserName() {
-        return ECAGetUserName();
-    }
-
-    public String ECAgetPassword() {
-        return ECAGetPassword();
     }
 
     public String TripsgetUserName() {
@@ -389,6 +378,7 @@ public class DriverFacade extends WebdriverHelper {
         return this;
     }
 
+
     public DriverFacade selectOptional(By passengerTitleField, String valueToBeSelected) {
         findElementoptional(passengerTitleField);
         if (getStepResult()) {
@@ -539,8 +529,6 @@ public class DriverFacade extends WebdriverHelper {
     }
 
 
-
-
     public DriverFacade SwitchToDefaultContext() {
         webDriver.switchTo().defaultContent();
         return this;
@@ -681,6 +669,7 @@ public class DriverFacade extends WebdriverHelper {
 
     }
 
+
     public DriverFacade scrollDown() {
         JavascriptExecutor jse2 = (JavascriptExecutor) getWebDriver();
         jse2.executeScript("window.scrollTo(0, document.body.scrollHeight)");
@@ -723,6 +712,13 @@ public class DriverFacade extends WebdriverHelper {
     public DriverFacade JSExecutorToZoom(String zoomLevel) {
         JavascriptExecutor executor = (JavascriptExecutor) getWebDriver();
         executor.executeScript("document.body.style.zoom = '" + zoomLevel + "'");
+        ReportOnFailure();
+        return this;
+    }
+
+    public DriverFacade JSExecutorDate(String dateid, String DateDOB) {
+        JavascriptExecutor date = (JavascriptExecutor) getWebDriver();
+        date.executeScript("document.getElementById ('" + dateid + "').value='" + DateDOB + "'");
         ReportOnFailure();
         return this;
     }
@@ -954,7 +950,6 @@ public class DriverFacade extends WebdriverHelper {
         ReportOnFailure();
         return this;
     }
-
 
 
     public DriverFacade newsendKeys(By bySelector, String value) {
@@ -1319,6 +1314,7 @@ public class DriverFacade extends WebdriverHelper {
     public void writeInReportGreen(String stext) {
         currentScenario.write("<span style='Color: green'>" + stext + "</span>");
     }
+
     public void writeInReportBlue(String stext) {
         currentScenario.write("<span style='Color: blue'>" + stext + "</span>");
     }
@@ -1612,4 +1608,7 @@ public class DriverFacade extends WebdriverHelper {
 
     }
 
+
+
 }
+

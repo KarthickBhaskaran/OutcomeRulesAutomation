@@ -49,7 +49,6 @@
 		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
 			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
 						<li class='waves-effect'><a href='#!' view='category-view' onclick="configureView(1)"><i class='material-icons'>label_outline</i></a></li>
-			<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
 			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></a></li>
 		</ul>
 		<!-- report name -->
@@ -59,7 +58,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>June 26, 2023 02:32:19 pm</span>
+			<span class='label blue darken-3 suite-start-time'>Sept 20, 2023 01:42:14 pm</span>
 			</a>
 		</ul>
 	</div>
@@ -75,7 +74,6 @@
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
 										<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
-					<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -87,7 +85,7 @@
 				<i class='material-icons'>local_offer</i> Category
 				</a>
 				<ul id='category-toggle' class='dropdown-content'>
-					<li><a href='#'>@Outcome</a></li>
+					<li><a href='#'>@CRMCaseCreation</a></li>
 					<li class='divider'></li>
 					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
 				</ul>
@@ -128,10 +126,10 @@
                     <canvas id='parent-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> feature(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>1</span> feature(s) passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='100%'>1</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> skipped
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> skipped
                 </div>
             </div>
         </div>
@@ -142,10 +140,10 @@
                     <canvas id='child-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> scenario(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>1</span> scenario(s) passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='100%'>1</span> scenario(s) failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> scenario(s) failed, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> skipped, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
                 </div>
@@ -158,10 +156,10 @@
                     <canvas id='grandchild-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='75%'><span class='strong'>3</span> step(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>9</span> step(s) passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='25%'>1</span> scenario(s) failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> scenario(s) failed, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> skipped, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
                 </div>
@@ -181,11 +179,11 @@
 </div>	<div class='subview-left left'>
 		<div class='view-summary'>
 			<ul id='test-collection' class='test-collection'>
-				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='1'>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
 					<div class='test-heading'>
-						<span class='test-name'>OutcomeTest in UAT Environment</span>
-						<span class='test-time'>June 26, 2023 02:32:19 pm</span>
-						<span class='test-status right fail'>fail</span>
+						<span class='test-name'>CRM Manual case creation in UAT Environment</span>
+						<span class='test-time'>Sept 20, 2023 01:42:14 pm</span>
+						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class="sr-filters bdd-filters">
@@ -194,13 +192,13 @@
 	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
 	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
 </div>
-<div class='scenario node' test-id='2' status='fail'>
+<div class='scenario node' test-id='2' status='pass'>
 	<div class='category-list'>
-		<span class='category label'>@Outcome</span>
+		<span class='category label'>@CRMCaseCreation</span>
 	</div>
-	<span class='duration right label'>0h 1m 4s+21ms</span>
+	<span class='duration right label'>0h 6m 47s+244ms</span>
 	<div class="bdd-test">
-		<div class="scenario-name"><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span> Scenario: Test outcome rules and  capture booking ID</div>
+		<div class="scenario-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span> Scenario: Test HIAS case creation and  capture case ID</div>
 	</div>
 	<ul class='steps'>
 		<li test-id='3' class='node * pass' status='pass'>
@@ -211,40 +209,37 @@
 			<div class="step-name" title="CartPageSteps.ilogintocrm()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given I login to CRM</div>
 			<div class="node-step">CRM Login Successful</div>
 			<div class="node-step">***********************</div>
-			<div class="node-step">Screenshot goes hereOutcomeTest_1687753999124</div>
+			<div class="node-step">Screenshot goes hereOutcomeTest_1695181399613</div>
 		</li>
-		<li test-id='5' class='node and fail' status='fail'>
-			<div class="step-name" title="CartPageSteps.i_perform_outcome_ruletest()"><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span>And I perform Outcome Rule Test</div>
-			<div class="node-step">****************************************</div>
-			<div class="node-step">Total records for tests   : 4</div>
-			<div class="node-step">****************************************</div>
-			<div class="node-step"><span style='Color: blue'>TCRef                        : TAS_25</span></div>
-			<div class="node-step">CONTRACT_GROUP_ID            : HIAS_TAS</div>
-			<div class="node-step">Disposition_Description      : See a doctor today</div>
-			<textarea disabled class="code-block">org.openqa.selenium.WebDriverException: unknown error: net::ERR_INTERNET_DISCONNECTED
-  (Session info: chrome=114.0.5735.134)
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'WAZ2-DEV-575603', ip: '127.0.0.1', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.134, chrome: {chromedriverVersion: 113.0.5672.63 (0e1a4471d5ae..., userDataDir: C:\Users\KARTHI~1.BHA\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:56080}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 91d9a4f8f77042e0bd2d379dc65e28f3
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)
-	at hda.outcome.rules.tests.cotrollers.DriverFacade.navigateToUrl(DriverFacade.java:336)
-	at hda.outcome.rules.tests.PageObjects.CartPage.performoutcometest(CartPage.java:238)
-	at hda.outcome.rules.tests.stepdefs.CartPageSteps.i_perform_outcome_ruletest(CartPageSteps.java:28)
-	at ✽.I perform Outcome Rule Test(hda/outcome/rules/tests/CRM_ManualCaseCreation.feature:9)
-</textarea>
+		<li test-id='5' class='node then pass' status='pass'>
+			<div class="step-name" title="CartPageSteps.i_enter_callderdetails()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then I Enter Caller details</div>
+			<div class="node-step">Screenshot goes hereOutcomeTest_1695181431697</div>
+			<div class="node-step">Screenshot goes hereOutcomeTest_1695181458011</div>
 		</li>
-		<li test-id='6' class='node * pass' status='pass'>
+		<li test-id='6' class='node and pass' status='pass'>
+			<div class="step-name" title="CartPageSteps.i_enter_callsource()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And I Enter Call Source state</div>
+			<div class="node-step">Screenshot goes hereOutcomeTest_1695181471421</div>
+		</li>
+		<li test-id='7' class='node then pass' status='pass'>
+			<div class="step-name" title="CartPageSteps.i_savecase()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then I Save case and fill identity</div>
+			<div class="node-step"></div>
+		</li>
+		<li test-id='8' class='node and pass' status='pass'>
+			<div class="step-name" title="CartPageSteps.i_enter_triage()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And I Enter symptoms and triage</div>
+			<div class="node-step">Screenshot goes hereOutcomeTest_1695181529049</div>
+			<div class="node-step">Screenshot goes hereOutcomeTest_1695181559038</div>
+			<div class="node-step">Screenshot goes hereOutcomeTest_1695181565542</div>
+		</li>
+		<li test-id='9' class='node and pass' status='pass'>
+			<div class="step-name" title="CartPageSteps.i_perform_servicesearch()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And I perform service search</div>
+			<div class="node-step"></div>
+		</li>
+		<li test-id='10' class='node and pass' status='pass'>
+			<div class="step-name" title="CartPageSteps.i_complete_case()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And I complete the case and resolve</div>
+			<div class="node-step">Screenshot goes hereOutcomeTest_1695181740307</div>
+			<div class="node-step">Case ID                      :  CAS-42448-C5B8Y0</div>
+		</li>
+		<li test-id='11' class='node * pass' status='pass'>
 			<div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>CucumberHooks.teardownWebDriverController(Scenario)</div>
 			<div class="node-step"></div>
 		</li>
@@ -292,15 +287,15 @@ Session ID: 91d9a4f8f77042e0bd2d379dc65e28f3
 			<ul id='category-collection' class='category-collection'>
 				<li class='category displayed active'>
 					<div class='category-heading'>
-						<span class='category-name'>@Outcome</span>
+						<span class='category-name'>@CRMCaseCreation</span>
 						<span class='category-status right'>
-						<span class='label fail'>1</span>
+						<span class='label pass'>1</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
 							
-							<span status="fail" class='label red lighten-1 white-text'>Failed: 1</span>
 							
 						</div>
 						<div class='category-tests'>
@@ -314,9 +309,9 @@ Session ID: 91d9a4f8f77042e0bd2d379dc65e28f3
 								</thead>
 								<tbody>
 									<tr>
-										<td>June 26, 2023 02:32:19 pm</td>
-										<td class='linked' test-id='2'>Test outcome rules and  capture booking ID</td>
-										<td><span class='test-status fail'>fail</span></td>
+										<td>Sept 20, 2023 01:42:14 pm</td>
+										<td class='linked' test-id='2'>Test HIAS case creation and  capture case ID</td>
+										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 								</tbody>
 							</table>
@@ -332,83 +327,7 @@ Session ID: 91d9a4f8f77042e0bd2d379dc65e28f3
 		</div>
 	</div>
 </div>
-<!-- category view --><div id='exception-view' class='view hide'>
-	<section id='controls'>
-		<div class='controls grey lighten-4'>
-			<!-- search -->
-			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
-				<a href="#" class='search-div'>
-				<i class='material-icons'>search</i> Search
-				</a>
-				<div class='input-field left hide'>
-					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
-				</div>
-			</div>
-			<!-- search -->
-		</div>
-	</section>
-	<div class='subview-left left'>
-		<div class='view-summary'>
-			<ul id='exception-collection' class='exception-collection'>
-				<li class='exception displayed active'>
-					<div class='exception-heading'>
-						<span class='exception-name'>org.openqa.selenium.WebDriverException</span>
-						<span class='exception-count right'><span class='label red lighten-1 white-text'>1</span></span>
-					</div>
-					<div class='exception-content hide'>
-						<div class='exception-tests'>
-							<table class='bordered table-results'>
-								<thead>
-									<tr>
-										<th>Timestamp</th>
-										<th>TestName</th>
-										<th>Status</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>June 26, 2023 02:33:19 pm</td>
-										<td class='linked' test-id='5'>And I perform Outcome Rule Test</td>
-										<td>
-											<textarea disabled class="code-block">org.openqa.selenium.WebDriverException: unknown error: net::ERR_INTERNET_DISCONNECTED
-  (Session info: chrome=114.0.5735.134)
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'WAZ2-DEV-575603', ip: '127.0.0.1', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.134, chrome: {chromedriverVersion: 113.0.5672.63 (0e1a4471d5ae..., userDataDir: C:\Users\KARTHI~1.BHA\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:56080}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 91d9a4f8f77042e0bd2d379dc65e28f3
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)
-	at hda.outcome.rules.tests.cotrollers.DriverFacade.navigateToUrl(DriverFacade.java:336)
-	at hda.outcome.rules.tests.PageObjects.CartPage.performoutcometest(CartPage.java:238)
-	at hda.outcome.rules.tests.stepdefs.CartPageSteps.i_perform_outcome_ruletest(CartPageSteps.java:28)
-	at ✽.I perform Outcome Rule Test(hda/outcome/rules/tests/CRM_ManualCaseCreation.feature:9)
-</textarea>
-										</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</li>
-			</ul>
-		</div>
-	</div>
-	<div class='subview-right left'>
-		<div class='view-summary'>
-			<h5 class='exception-name'></h5>
-		</div>
-	</div>
-</div>
-<!-- exception view --><div id='dashboard-view' class='view hide'>
+<!-- category view --><!-- exception view --><div id='dashboard-view' class='view hide'>
 	<div class='card-panel transparent np-v'>
 		<h5>Dashboard</h5>
 
@@ -428,25 +347,25 @@ Session ID: 91d9a4f8f77042e0bd2d379dc65e28f3
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>4</div>
+					<div class='panel-lead'>9</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>June 26, 2023 02:32:19 pm</div>
+					<div class='panel-lead'>Sept 20, 2023 01:42:14 pm</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>June 26, 2023 02:33:23 pm</div>
+			 		<div class='panel-lead'>Sept 20, 2023 01:49:01 pm</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>0h 1m 4s+228ms</div>
+					<div class='panel-lead'>0h 6m 47s+694ms</div>
 				</div>
 			</div>
 			<div class='col s6'>
@@ -462,12 +381,12 @@ Session ID: 91d9a4f8f77042e0bd2d379dc65e28f3
 							<th>Passed %</th>
 						</tr>
 						<tr>
-							<td>@Outcome</td>
-							<td>0</td>
+							<td>@CRMCaseCreation</td>
 							<td>1</td>
 							<td>0</td>
+							<td>0</td>
 							<td>
-									0%
+									100%
 							</td>
 						</tr>
 					</table>
@@ -482,38 +401,38 @@ Session ID: 91d9a4f8f77042e0bd2d379dc65e28f3
 		<script>
 			var statusGroup = {
                 parentCount: 1,
-				passParent: 0,
-				failParent: 1,
+				passParent: 1,
+				failParent: 0,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
 				skipParent: 0,
-				exceptionsParent: 1,
+				exceptionsParent: 0,
 				childCount: 1,
-				passChild: 0,
-				failChild: 1,
+				passChild: 1,
+				failChild: 0,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
 				skipChild: 0,
 				infoChild: 0,
 				debugChild: 0,
-				exceptionsChild: 1,
-				grandChildCount: 4,
-				passGrandChild: 3,
-				failGrandChild: 1,
+				exceptionsChild: 0,
+				grandChildCount: 9,
+				passGrandChild: 9,
+				failGrandChild: 0,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
 				warningGrandChild: 0,
 				skipGrandChild: 0,
 				infoGrandChild: 0,
 				debugGrandChild: 0,
-				exceptionsGrandChild: 1,
+				exceptionsGrandChild: 0,
 			};
 		</script>
 		<script>
 			var timeline = {
-			        "OutcomeTest in UAT Environment":64.021
+			        "CRM Manual case creation in UAT Environment":407.244
 			};
 		</script>
 	
